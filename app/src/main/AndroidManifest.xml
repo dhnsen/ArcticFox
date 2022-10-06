@@ -14,20 +14,20 @@
         android:theme="@style/Theme.ArcticFox"
         tools:targetApi="31">
         <activity
-            android:name=".UI.PartDetail"
+            android:name="com.bicycleshop.arcticfox.UI.PartDetail"
             android:exported="false" />
         <activity
-            android:name=".UI.PartList"
+            android:name="com.bicycleshop.arcticfox.UI.PartList"
             android:parentActivityName=".UI.ProductList"
             android:label="Part List"
             android:exported="false" />
         <activity
-            android:name=".UI.ProductList"
+            android:name="com.bicycleshop.arcticfox.UI.ProductList"
             android:parentActivityName=".UI.MainActivity"
             android:label="Product List"
             android:exported="false" />
         <activity
-            android:name=".UI.MainActivity"
+            android:name="com.bicycleshop.arcticfox.UI.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
