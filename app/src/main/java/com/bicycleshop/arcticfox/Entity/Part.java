@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey;
 public class Part {
     @PrimaryKey(autoGenerate = true)
     private int partID;
-    private int partName;
+    private String partName;
     private double price;
 
-    public Part(int partID, int partName, double partPrice) {
+    public Part(int partID, String partName, double partPrice) {
         this.partID = partID;
         this.partName = partName;
         this.price = partPrice;
@@ -37,11 +37,11 @@ public class Part {
         this.partID = partID;
     }
 
-    public int getPartName() {
+    public String getPartName() {
         return partName;
     }
 
-    public void setPartName(int partName) {
+    public void setPartName(String partName) {
         this.partName = partName;
     }
 
