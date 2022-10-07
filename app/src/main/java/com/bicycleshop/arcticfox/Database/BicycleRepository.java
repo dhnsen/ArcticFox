@@ -69,7 +69,6 @@ public class BicycleRepository {
         }
     }
     public void insert(Part part){
-        mPartDAO.insert(part);
         databaseExecutor.execute(() ->{
             mPartDAO.insert(part);
         });

@@ -15,7 +15,7 @@ import com.bicycleshop.arcticfox.DAO.ProductDAO;
 import com.bicycleshop.arcticfox.Entity.Part;
 import com.bicycleshop.arcticfox.Entity.Product;
 
-@Database(entities = {Product.class, Part.class}, version = 2)
+@Database(entities = {Product.class, Part.class}, version = 3)
 public abstract class BicycleDatabaseBuilder extends RoomDatabase {
     public abstract ProductDAO productDAO();
 

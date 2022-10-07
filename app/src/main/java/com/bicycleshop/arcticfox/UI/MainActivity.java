@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.bicycleshop.arcticfox.Database.BicycleRepository;
+import com.bicycleshop.arcticfox.Entity.Part;
 import com.bicycleshop.arcticfox.Entity.Product;
 import com.bicycleshop.arcticfox.R;
 
@@ -24,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
         BicycleRepository repo = new BicycleRepository(getApplication());
         Product product = new Product(1, "unicycle", 10.00);
         repo.insert(product);
+        Part part = new Part(1, "wheel", 10.00, 1);
+        repo.insert(part);
     }
 }

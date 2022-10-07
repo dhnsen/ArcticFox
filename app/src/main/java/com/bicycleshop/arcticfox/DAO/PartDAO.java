@@ -1,5 +1,6 @@
 package com.bicycleshop.arcticfox.DAO;
 
+import androidx.annotation.RequiresPermission;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;

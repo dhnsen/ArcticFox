@@ -1,6 +1,5 @@
 package com.bicycleshop.arcticfox.Entity;
 
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -8,15 +7,16 @@ import kotlinx.coroutines.channels.ActorKt;
 
 @Entity(tableName = "products")
 public class Product {
+    @PrimaryKey(autoGenerate = true)
+    private int productID;
+    private String productName;
+    private double productPrice;
 
     public Product(int productID, String productName, double productPrice) {
         this.productID = productID;
         this.productName = productName;
         this.productPrice = productPrice;
     }
-
-    @PrimaryKey(autoGenerate = true)
-    private int productID;
 
     @Override
     public String toString() {
@@ -26,9 +26,6 @@ public class Product {
                 ", productPrice=" + productPrice +
                 '}';
     }
-
-    private String productName;
-    private double productPrice;
 
     public int getProductID() {
         return productID;

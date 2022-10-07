@@ -10,7 +10,6 @@ import androidx.room.Update;
 
 import com.bicycleshop.arcticfox.Entity.Product;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao

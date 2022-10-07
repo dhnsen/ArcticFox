@@ -3,29 +3,30 @@ package com.bicycleshop.arcticfox.Entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import kotlinx.coroutines.channels.ActorKt;
+
 @Entity(tableName = "parts")
 public class Part {
     @PrimaryKey(autoGenerate = true)
     private int partID;
     private String partName;
     private double price;
+    private int productID;
 
-    public Part(int partID, String partName, double partPrice) {
+    public Part(int partID, String partName, double price, int productID) {
         this.partID = partID;
         this.partName = partName;
-        this.price = partPrice;
-    }
-
-    //TODO: this ctor was not in the tutorial
-    public Part() {
+        this.price = price;
+        this.productID = productID;
     }
 
     @Override
     public String toString() {
         return "Part{" +
                 "partID=" + partID +
-                ", partName=" + partName +
-                ", partPrice=" + price +
+                ", partName='" + partName + '\'' +
+                ", price=" + price +
+                ", productID=" + productID +
                 '}';
     }
 
@@ -51,5 +52,12 @@ public class Part {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 }
