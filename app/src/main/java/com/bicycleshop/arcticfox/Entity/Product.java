@@ -3,8 +3,6 @@ package com.bicycleshop.arcticfox.Entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import kotlinx.coroutines.channels.ActorKt;
-
 @Entity(tableName = "products")
 public class Product {
     @PrimaryKey(autoGenerate = true)
