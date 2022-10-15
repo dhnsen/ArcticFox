@@ -27,14 +27,20 @@ public class PartList extends AppCompatActivity {
         name = getIntent().getStringExtra("name");
         price = getIntent().getDoubleExtra("price", -1.0);
         editName.setText(name);
-        editPrice.setText(price.toString());
+        editPrice.setText(Double.toString(price));
 
     }
 
     public void saveButton(View view) {
         Product product;
         if (productID == -1) {
-
+            int newID = repo.getAllProducts().get(repo.getAllProducts().size() -1).getProductID() + 1;
+            product = new Product(newID, editName.getText().toString(), Double.parseDouble(editPrice.getText().toString()));
+            repo.insert(product);
+        }
+        else {
+            product = new Product(productID, editName.getText().toString(), Double.parseDouble(editPrice.getText().toString()));
+            repo.update(product);
         }
     }
 }
