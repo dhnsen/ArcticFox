@@ -13,6 +13,7 @@ import com.bicycleshop.arcticfox.R;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder>{
+
     class ProductViewHolder extends RecyclerView.ViewHolder {
         private final TextView productItemView;
         private ProductViewHolder(View itemView){
@@ -38,14 +39,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     private final Context context;
     private final LayoutInflater mInflater;
     public ProductAdapter(Context context) {
+        mInflater = LayoutInflater.from(context);
         this.context = context;
-        this.mInflater = LayoutInflater.from(context);
     }
+
     @NonNull
     @Override
     public ProductAdapter.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = mInflater.inflate(R.layout.activity_product_list_item, parent, false);
-        return new ProductViewHolder((itemView));
+        return new ProductViewHolder(itemView);
     }
 
     @Override
@@ -65,7 +67,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         if (mProducts != null) {
             return mProducts.size();
         }
-        return 0;
+        else return 0;
     }
 
     public void setProducts(List<Product> products){

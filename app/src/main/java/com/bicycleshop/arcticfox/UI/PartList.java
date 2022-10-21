@@ -28,7 +28,7 @@ public class PartList extends AppCompatActivity {
         price = getIntent().getDoubleExtra("price", -1.0);
         editName.setText(name);
         editPrice.setText(Double.toString(price));
-
+        repo = new BicycleRepository(getApplication());
     }
 
     public void saveButton(View view) {
