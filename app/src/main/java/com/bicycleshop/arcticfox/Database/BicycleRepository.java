@@ -50,7 +50,7 @@ public class BicycleRepository {
     }
     public void update(Product product){
         databaseExecutor.execute(() ->{
-            mProductDAO.insert(product);
+            mProductDAO.update(product);
         });
         try{
             Thread.sleep(1000);
