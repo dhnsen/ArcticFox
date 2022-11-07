@@ -12,7 +12,7 @@ import com.bicycleshop.arcticfox.Entity.Product;
 import com.bicycleshop.arcticfox.R;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static int numAlert;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
