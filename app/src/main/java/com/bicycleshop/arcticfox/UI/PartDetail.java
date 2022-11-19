@@ -97,7 +97,7 @@ public class PartDetail extends AppCompatActivity {
                 }
                 Long trigger = myDate.getTime();
                 Intent intent = new Intent(PartDetail.this, MyReceiver.class);
-                intent.putExtra("key", "messageIwanttosend");
+                intent.putExtra("key", "messageIwantToSend");
                 PendingIntent sender = PendingIntent.getBroadcast(PartDetail.this, MainActivity.numAlert++, intent, 0);
                 AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
                 alarmManager.set(AlarmManager.RTC_WAKEUP, trigger, sender);
